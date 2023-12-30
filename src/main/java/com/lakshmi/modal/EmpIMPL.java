@@ -55,7 +55,18 @@ public class EmpIMPL {
             System.out.println("\n Employees joined after 2015");
              employeeList.parallelStream().filter(emp -> emp.getYearOfJoining() > 2015).map(Employee::getName).forEach(System.out::println);
 
-         */
         // 6 : Count the number of employees in each department?
+            System.out.println("\n Employee count in each department");
+            employeeList.parallelStream()
+                        .collect(Collectors.groupingBy(Employee::getDepartment,Collectors.counting()))
+                        .entrySet()
+                        .forEach(System.out::println);
+         */
+        // 7 : What is the average salary of each department?
+            System.out.println("\n Average salary of each department");
+            employeeList
+
+
+
     }
 }
