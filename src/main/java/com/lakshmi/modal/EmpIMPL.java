@@ -1,5 +1,6 @@
 package com.lakshmi.modal;
 
+import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -27,7 +28,7 @@ public class EmpIMPL {
         employeeList.add(new Employee(244, "Nicolus Den", 24, "Male", "Sales And Marketing", 2017, 10700.5));
         employeeList.add(new Employee(255, "Ali Baig", 23, "Male", "Infrastructure", 2018, 12700.0));
         employeeList.add(new Employee(266, "Sanvi Pandey", 26, "Female", "Product Development", 2015, 28900.0));
-        employeeList.add(new Employee(277, "Anuj Chettiar", 31, "Male", "Product Development", 2012, 35700.0));
+        employeeList.add(new Employee(277, "Hari", 41, "Male", "Product Development", 2012, 305700.0));
 
         // Real Time Queries On employeeList,
         /**
@@ -40,10 +41,15 @@ public class EmpIMPL {
         // 2 : Print the name of all departments in the organization?
              employeeList.parallelStream().map(Employee::getDepartment).distinct().forEach(System.out::println);
 
-         */
         // 3 : What is the average age of male and female employees?
             System.out.println("\n Average age of Employees");
             var collect = employeeList.stream().collect(Collectors.groupingBy(Employee::getGender, Collectors.averagingDouble(Employee::getSalary)));
             System.out.println(collect);
+
+         */
+        // 4 : Get the details of highest paid employee in the organization?
+            System.out.println("\n Highest paid employee in the organization");
+             var employee = employeeList.parallelStream().collect(Collectors.maxBy(Comparator.comparing(Employee::getSalary))).get();
+            System.out.println(employee.getName()+",,"+employee.getSalary());
     }
 }
