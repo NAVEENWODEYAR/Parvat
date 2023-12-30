@@ -1,9 +1,6 @@
 package com.lakshmi.modal;
 
-import java.util.Comparator;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -86,7 +83,6 @@ public class EmpIMPL {
             var employee = employeeList.parallelStream().collect(Collectors.minBy(Comparator.comparing(Employee::getYearOfJoining))).get();
             System.out.println(employee.getName()+" "+employee.getYearOfJoining());
 
-
         // 10 : How many male and female employees are there in the sales and marketing team?
             System.out.println("\n Gender count in the department");
             employeeList.parallelStream()
@@ -95,12 +91,27 @@ public class EmpIMPL {
                     .entrySet()
                     .forEach(System.out::println);
 
-         */
         // 11 : What is the average salary of male and female employees?
             System.out.println("\n Average salary of employees");
             employeeList.parallelStream()
                     .collect(Collectors.groupingBy(Employee::getGender,Collectors.averagingDouble(Employee::getSalary)))
                     .entrySet()
                     .forEach(System.out::println);
+
+        // 12 : List down the names of all employees in each department?
+            System.out.println("\n Department employee names");
+              var collect = employeeList.parallelStream().collect(Collectors.groupingBy(Employee::getDepartment));
+            System.out.println(collect);
+
+         */
+        // 13 : What is the average salary and total salary of the whole organization?
+            System.out.println("Summary of department");
+            var summaryStatistics = employeeList.stream().collect(Collectors.summarizingDouble(Employee::getSalary));
+            System.out.println("\n Total salary of the whole organization "+summaryStatistics.getSum());
+            System.out.println("\n Max salary of the whole organization "+summaryStatistics.getMax());
+            System.out.println("\n Min salary of the whole organization "+summaryStatistics.getMin());
+            System.out.println("\n Average salary of the whole organization "+summaryStatistics.getAverage());
+            System.out.println("\n Total salary count of the whole organization "+summaryStatistics.getCount());
+
     }
 }
