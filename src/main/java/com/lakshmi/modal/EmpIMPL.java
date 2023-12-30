@@ -61,12 +61,26 @@ public class EmpIMPL {
                         .collect(Collectors.groupingBy(Employee::getDepartment,Collectors.counting()))
                         .entrySet()
                         .forEach(System.out::println);
-         */
+
         // 7 : What is the average salary of each department?
             System.out.println("\n Average salary of each department");
-            employeeList
+            employeeList.parallelStream()
+                        .collect(Collectors.groupingBy(Employee::getDepartment,Collectors.averagingDouble(Employee::getSalary)))
+                        .entrySet()
+                        .forEach(System.out::println);
 
+         */
+        // 8 : Get the details of youngest male employee in the product development department?
+            System.out.println("\n Youngest Male employee in the product development department");
+//            var employee = employeeList.stream().min(Comparator.comparing(Employee::getAge)).get();
+//            System.out.println(employee.getName()+" "+employee.getAge());
 
+                var juniorEmp = employeeList.parallelStream()
+                .filter(emp -> emp.getDepartment().equalsIgnoreCase("product development department"))
+                .min(Comparator.comparing(Employee::getAge))
+                .get();
+            System.out.println(juniorEmp.getName()+" "+juniorEmp.getAge());
 
+        // 9 : Who has the most working experience in the organization?
     }
 }
