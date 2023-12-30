@@ -46,10 +46,16 @@ public class EmpIMPL {
             var collect = employeeList.stream().collect(Collectors.groupingBy(Employee::getGender, Collectors.averagingDouble(Employee::getSalary)));
             System.out.println(collect);
 
-         */
         // 4 : Get the details of highest paid employee in the organization?
             System.out.println("\n Highest paid employee in the organization");
              var employee = employeeList.parallelStream().collect(Collectors.maxBy(Comparator.comparing(Employee::getSalary))).get();
             System.out.println(employee.getName()+",,"+employee.getSalary());
+
+        // 5 : Get the names of all employees who have joined after 2015?
+            System.out.println("\n Employees joined after 2015");
+             employeeList.parallelStream().filter(emp -> emp.getYearOfJoining() > 2015).map(Employee::getName).forEach(System.out::println);
+
+         */
+        // 6 : Count the number of employees in each department?
     }
 }
