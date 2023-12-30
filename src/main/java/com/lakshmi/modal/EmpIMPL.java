@@ -2,6 +2,7 @@ package com.lakshmi.modal;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -31,13 +32,18 @@ public class EmpIMPL {
         // Real Time Queries On employeeList,
         /**
          * @Author Naveen Wodeyar
-         */
+
         // 1 : How many male and female employees are there in the organization?
             var collect = employeeList.parallelStream().collect(Collectors.groupingBy(Employee::getGender, Collectors.counting()));
             System.out.println(collect);
     
         // 2 : Print the name of all departments in the organization?
-            var distinct = employeeList.parallelStream().map(Employee::getDepartment).distinct();
-              System.out.println(distinct);
+             employeeList.parallelStream().map(Employee::getDepartment).distinct().forEach(System.out::println);
+
+         */
+        // 3 : What is the average age of male and female employees?
+            System.out.println("\n Average age of Employees");
+            var collect = employeeList.stream().collect(Collectors.groupingBy(Employee::getGender, Collectors.averagingDouble(Employee::getSalary)));
+            System.out.println(collect);
     }
 }
