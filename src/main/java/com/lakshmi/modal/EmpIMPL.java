@@ -103,15 +103,20 @@ public class EmpIMPL {
               var collect = employeeList.parallelStream().collect(Collectors.groupingBy(Employee::getDepartment));
             System.out.println(collect);
 
-         */
+
         // 13 : What is the average salary and total salary of the whole organization?
             System.out.println("Summary of department");
             var summaryStatistics = employeeList.stream().collect(Collectors.summarizingDouble(Employee::getSalary));
-            System.out.println("\n Total salary of the whole organization "+summaryStatistics.getSum());
-            System.out.println("\n Max salary of the whole organization "+summaryStatistics.getMax());
-            System.out.println("\n Min salary of the whole organization "+summaryStatistics.getMin());
-            System.out.println("\n Average salary of the whole organization "+summaryStatistics.getAverage());
-            System.out.println("\n Total salary count of the whole organization "+summaryStatistics.getCount());
+            System.out.println("\n Total salary of the whole organization:"+summaryStatistics.getSum());
+            System.out.println("\n Max salary of the whole organization:"+summaryStatistics.getMax());
+            System.out.println("\n Min salary of the whole organization:"+summaryStatistics.getMin());
+            System.out.println("\n Average salary of the whole organization:"+summaryStatistics.getAverage());
+            System.out.println("\n Total salary count of the whole organization:"+summaryStatistics.getCount());
 
+         */
+        // 14 : Who is the oldest employee in the organization? What is his age and which department he belongs to?
+            System.out.println("\n SeniorMost employee in the organization");
+            var employee = employeeList.parallelStream().min(Comparator.comparing(Employee::getYearOfJoining)).get();
+            System.out.println(employee.getName()+" "+employee.getDepartment());
     }
 }
