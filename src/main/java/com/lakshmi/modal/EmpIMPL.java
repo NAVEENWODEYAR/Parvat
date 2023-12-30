@@ -86,13 +86,21 @@ public class EmpIMPL {
             var employee = employeeList.parallelStream().collect(Collectors.minBy(Comparator.comparing(Employee::getYearOfJoining))).get();
             System.out.println(employee.getName()+" "+employee.getYearOfJoining());
 
-         */
+
         // 10 : How many male and female employees are there in the sales and marketing team?
             System.out.println("\n Gender count in the department");
-        for (Map.Entry<String, List<Employee>> salesAndMarketing : employeeList.parallelStream()
-                .filter(emp -> emp.getDepartment().equalsIgnoreCase("Sales and Marketing"))
-                .collect(Collectors.groupingBy(Employee::getGender)).entrySet()) {
-            
-        }
+            employeeList.parallelStream()
+                    .filter(emp -> emp.getDepartment().equalsIgnoreCase("Sales and Marketing"))
+                    .collect(Collectors.groupingBy(Employee::getGender,Collectors.counting()))
+                    .entrySet()
+                    .forEach(System.out::println);
+
+         */
+        // 11 : What is the average salary of male and female employees?
+            System.out.println("\n Average salary of employees");
+            employeeList.parallelStream()
+                    .collect(Collectors.groupingBy(Employee::getGender,Collectors.averagingDouble(Employee::getSalary)))
+                    .entrySet()
+                    .forEach(System.out::println);
     }
 }
