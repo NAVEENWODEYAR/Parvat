@@ -69,18 +69,24 @@ public class EmpIMPL {
                         .entrySet()
                         .forEach(System.out::println);
 
-         */
         // 8 : Get the details of youngest male employee in the product development department?
             System.out.println("\n Youngest Male employee in the product development department");
 //            var employee = employeeList.stream().min(Comparator.comparing(Employee::getAge)).get();
 //            System.out.println(employee.getName()+" "+employee.getAge());
 
                 var juniorEmp = employeeList.parallelStream()
-                .filter(emp -> emp.getDepartment().equalsIgnoreCase("product development department"))
+                .filter(emp -> emp.getDepartment()=="Product Development Department" && emp.getGender() == "Male")
                 .min(Comparator.comparing(Employee::getAge))
                 .get();
             System.out.println(juniorEmp.getName()+" "+juniorEmp.getAge());
 
+
         // 9 : Who has the most working experience in the organization?
+            System.out.println("\n Seniormost employee in the organization");
+            var employee = employeeList.parallelStream().collect(Collectors.minBy(Comparator.comparing(Employee::getYearOfJoining))).get();
+            System.out.println(employee.getName()+" "+employee.getYearOfJoining());
+
+         */
+        // 10 : How many male and female employees are there in the sales and marketing team?
     }
 }
