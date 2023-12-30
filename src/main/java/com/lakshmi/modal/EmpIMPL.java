@@ -88,5 +88,11 @@ public class EmpIMPL {
 
          */
         // 10 : How many male and female employees are there in the sales and marketing team?
+            System.out.println("\n Gender count in the department");
+        for (Map.Entry<String, List<Employee>> salesAndMarketing : employeeList.parallelStream()
+                .filter(emp -> emp.getDepartment().equalsIgnoreCase("Sales and Marketing"))
+                .collect(Collectors.groupingBy(Employee::getGender)).entrySet()) {
+            
+        }
     }
 }
