@@ -21,6 +21,12 @@ public class MethodsInCollectors {
         // 2. Creating specific collection: toCollection(),
             List<Integer> num = Arrays.asList(1,2,3,4,5,6,7,8,9);
             var collect1 = num.stream().filter(n -> n >= 2).collect(Collectors.toCollection(LinkedList::new));
-            System.out.println(collect1);
+            var collect2 = num.parallelStream().filter(n -> n > 5).collect(Collectors.toCollection(LinkedHashSet::new));
+            System.out.println(collect1.getClass()+" "+collect);
+            System.out.println(collect2.getClass()+" "+collect2);
+
+        // 3. Counting elements: Counting(),
+            var count = num.parallelStream().collect(Collectors.counting());
+        System.out.println("Total elements present in the collection "+count+"  "+num.stream().count());
     }
 }
