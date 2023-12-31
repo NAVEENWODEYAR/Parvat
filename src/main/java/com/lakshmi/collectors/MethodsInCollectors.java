@@ -37,5 +37,13 @@ public class MethodsInCollectors {
         // 5. Find the maximum value,
             var i1 = num.parallelStream().collect(Collectors.maxBy(Comparator.naturalOrder())).get();
             System.out.println("Maximum value in the list "+i1);
+
+        // 6. Partitioning a list: partitioningBy(),
+             var collect3 = num.stream().collect(Collectors.partitioningBy(n -> n > 2));
+            System.out.println(collect3);
+
+        // 7. Creating unmodifiable list: toUnmodifiableList(),
+            var collect4 = num.stream().collect(Collectors.toUnmodifiableList());
+             System.out.println(collect4.add(1));           // Exception in thread "main" java.lang.UnsupportedOperationException
     }
 }
