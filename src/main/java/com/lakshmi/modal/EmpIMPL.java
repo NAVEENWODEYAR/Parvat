@@ -1,12 +1,11 @@
 package com.lakshmi.modal;
 
 import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class EmpIMPL {
 
     public static void main(String[] args) {
+        int empId;
          List<Employee> employeeList = new LinkedList<>();
 
         employeeList.add(new Employee(111, "Jiya Brein", 32, "Female", "HR", 2011, 25000.0));
