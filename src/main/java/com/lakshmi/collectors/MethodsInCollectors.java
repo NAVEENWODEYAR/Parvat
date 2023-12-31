@@ -44,6 +44,10 @@ public class MethodsInCollectors {
 
         // 7. Creating unmodifiable list: toUnmodifiableList(),
             var collect4 = num.stream().collect(Collectors.toUnmodifiableList());
-             System.out.println(collect4.add(1));           // Exception in thread "main" java.lang.UnsupportedOperationException
+//             System.out.println(collect4.add(1));           // Exception in thread "main" java.lang.UnsupportedOperationException
+
+        //  8. Joining elements: joining(),
+            var collect5 = num.stream().map(n -> n.toString()).collect(Collectors.joining(",", "[", "]"));
+            System.out.println(collect5);
     }
 }
