@@ -27,6 +27,10 @@ public class MethodsInCollectors {
 
         // 3. Counting elements: Counting(),
             var count = num.parallelStream().collect(Collectors.counting());
-        System.out.println("Total elements present in the collection "+count+"  "+num.stream().count());
+             System.out.println("Total elements present in the collection "+count+"  "+num.stream().count());
+
+        // 4. Finding minimum value: minBy(),
+            var first = num.stream().min(Comparator.naturalOrder()).stream().findFirst();
+             System.out.println(first.get());
     }
 }
