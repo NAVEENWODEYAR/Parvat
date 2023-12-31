@@ -31,6 +31,11 @@ public class MethodsInCollectors {
 
         // 4. Finding minimum value: minBy(),
             var first = num.stream().min(Comparator.naturalOrder()).stream().findFirst();
-             System.out.println(first.get());
+            var i = num.stream().collect(Collectors.minBy(Comparator.reverseOrder())).get();
+            System.out.println("Minimum value in the collection "+first.get()+" "+i);
+
+        // 5. Find the maximum value,
+            var i1 = num.parallelStream().collect(Collectors.maxBy(Comparator.naturalOrder())).get();
+            System.out.println("Maximum value in the list "+i1);
     }
 }
