@@ -47,7 +47,7 @@ public class MethodsInCollectors {
 //             System.out.println(collect4.add(1));           // Exception in thread "main" java.lang.UnsupportedOperationException
 
         //  8. Joining elements: joining(),
-            var collect5 = num.stream().map(n -> n.toString()).collect(Collectors.joining(",", "[", "]"));
-            System.out.println(collect5);
+            var strJoin = num.stream().map(n -> n.toString()).collect(Collectors.joining(",", "[", "]"));
+            System.out.println(strJoin);
     }
 }
