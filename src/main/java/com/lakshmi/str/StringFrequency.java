@@ -9,10 +9,16 @@ static void stringFrequency(String st){
 
     for (char c : st1) {
         if (hmap.containsKey(c)) {
-            hmap.get(c), hmap.get(c)+1)
+            hmap.put(c,hmap.get(c)+1);
         }
         else
-            hmap.get(c),1);
+            hmap.put(c,1);
     }
+    System.out.println(hmap);
 }
+
+    public static void main(String[] args) {
+        stringFrequency("String");
+        stringFrequency("Malayalam");
+    }
 }
