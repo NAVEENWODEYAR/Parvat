@@ -2,7 +2,6 @@ package com.lakshmi.java8;
 
 import java.util.stream.IntStream;
 
-// Program for palindrome in java8,
 public class Palindrome {
     static boolean ispalindrome(String str){
 
@@ -12,7 +11,7 @@ public class Palindrome {
     }
     public static void main(String[] args) {
         System.out.println("Palindrome using Java8 library");
-        boolean b = ispalindrome("level");
+        boolean b = ispalindrome("lev\nel");
         if(ispalindrome("level"))
             System.out.println("Given string is palindrome");
         else
