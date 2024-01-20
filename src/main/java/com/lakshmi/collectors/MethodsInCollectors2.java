@@ -12,15 +12,10 @@ public class MethodsInCollectors2 {
             list.parallelStream().collect(Collectors.toList()).forEach(System.out::println);
 
         // 2. Creating specific collection: toCollection(),
-        var linkedList = list.stream().map(st -> st.toUpperCase()).collect(Collectors.toCollection(LinkedList::new));
-        System.out.println(linkedList);
+             var linkedList = list.stream().map(st -> st.toUpperCase()).collect(Collectors.toCollection(LinkedList::new));
+             System.out.println(linkedList);
 
             List<Integer> num = Arrays.asList(1,2,3,4,5,6,7,8,9);
-            var collect1 = num.stream().filter(n -> n >= 2).collect(Collectors.toCollection(LinkedList::new));
-            var collect2 = num.parallelStream().filter(n -> n > 5).collect(Collectors.toCollection(LinkedHashSet::new));
-            System.out.println(collect1.getClass()+" "+collect);
-            System.out.println(collect2.getClass()+" "+collect2);
-
         // 4. Finding minimum value: minBy(),
             var first = num.stream().min(Comparator.naturalOrder()).stream().findFirst();
             var i = num.stream().collect(Collectors.minBy(Comparator.reverseOrder())).get();
