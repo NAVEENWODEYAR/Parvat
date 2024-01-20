@@ -25,10 +25,6 @@ public class MethodsInCollectors2 {
             System.out.println(collect1.getClass()+" "+collect);
             System.out.println(collect2.getClass()+" "+collect2);
 
-        // 3. Counting elements: Counting(),
-            var count = num.parallelStream().collect(Collectors.counting());
-             System.out.println("Total elements present in the collection "+count+"  "+num.stream().count());
-
         // 4. Finding minimum value: minBy(),
             var first = num.stream().min(Comparator.naturalOrder()).stream().findFirst();
             var i = num.stream().collect(Collectors.minBy(Comparator.reverseOrder())).get();
