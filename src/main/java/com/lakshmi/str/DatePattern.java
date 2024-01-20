@@ -12,5 +12,6 @@ public class DatePattern {
     public static void main(String[] args) {
         dateFormat();
         System.out.println(System.currentTimeMillis());
+        System.out.println(new Date());
     }
 }
