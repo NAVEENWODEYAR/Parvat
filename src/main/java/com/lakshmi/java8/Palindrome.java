@@ -10,7 +10,6 @@ public class Palindrome {
                 .noneMatch(i -> cleanedStr.charAt(i) != cleanedStr.charAt(cleanedStr.length() - i - 1));
     }
     public static void main(String[] args) {
-        System.out.println("Palindrome using Java8 library");
         if(isPalindrome("level"))
             System.out.println("Given string is palindrome");
         else

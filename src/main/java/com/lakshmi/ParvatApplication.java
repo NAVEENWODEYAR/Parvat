@@ -8,7 +8,7 @@ public class ParvatApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ParvatApplication.class, args);
-		System.out.println("Parvat with the blessings of Lord Shiva carries Lord Shiva mounted on his brother Nandi.");
+		System.out.println("PARVAT, with the blessings of Lord Shiva carries Lord Shiva mounted on his brother Nandi.");
 		System.out.println(Thread.currentThread().getName() + "");
 	}
 
