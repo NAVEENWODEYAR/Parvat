@@ -1,4 +1,4 @@
-package com.lakshmi.modal;
+package com.lakshmi.queries;
 
 import java.util.*;
 
