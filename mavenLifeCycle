@@ -1,5 +1,5 @@
 
-A Build Lifecycle is Made Up of Phases.,
+A Maven Build Lifecycle is Made Up of Phases.,
     validate - validate the project is correct and all necessary information is available
     compile - compile the source code of the project
     test - test the compiled source code using a suitable unit testing framework. These tests should not require the code be packaged or deployed
