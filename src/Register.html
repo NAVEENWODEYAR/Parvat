@@ -5,7 +5,7 @@
     <title>Registration Page</title>
 </head>
 <body style="background-color:#f1f1f1">
-    <form action="Home.html" method="get" autocomplete="off">
+    <form action="Home.html" method="get" autocomplete="off"  id="registerFrom" name="registerFrom">
         <label for="i1"> Enter name </label>
         <input type="text" name="Name" id="i1" autocomplete="off" required/><br><br>
         <label for="i2"> Enter password </label>
@@ -13,4 +13,13 @@
         <input type="submit" value="SUBMIT">
     </form>
 </body>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var form = document.getElementById('registerFrom');
+            if(form){
+                form.querySelectorAll('input,textarea')
+                    .forEach(input=>input.setAttribute('autocomplete','off'));
+            }
+    });
+</script>
 </html>
