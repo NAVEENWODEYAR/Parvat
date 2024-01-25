@@ -5,12 +5,21 @@
     <title>Registration Page</title>
 </head>
 <body style="background-color:#f1f1f1">
-    <form action="Home.html" method="get" autocomplete="off" id="registerFrom" name="registerFrom">
+    <form action="Home.html" method="get" autocomplete="on" id="registerFrom" name="registerFrom">
         <label for="i1"> Enter name </label>
-        <input type="text" name="Name" id="i1" autocomplete="off" required/><br><br>
+        <input type="text" name="Name" id="i1" autocomplete="on" required/><br><br>
         <label for="i2"> Enter password </label>
-        <input type="password" name="Password" id="i2" autocomplete="off" required/><br><br>
+        <input type="password" name="Password" id="i2" autocomplete="on" required/><br><br>
         <input type="submit" value="SUBMIT">
     </form>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var form = document.getElementById('registerFrom');
+                if(form){
+                    form.querySelectorAll('input,textarea')
+                        .forEach(input=>input.setAttribute('autocomplete','off'));
+                }
+        });
+    </script>
 </body>
 </html>
