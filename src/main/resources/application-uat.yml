@@ -1,19 +1,17 @@
 
-
-  SQL  With the Dialect.
 spring:
-datasource:
-  driver-class-name: com.mysql.cj.jdbc.Driver
-  url: jdbc:mysql://localhost:3306/wikimedia
-  username: root
-  password: root
-jpa:
-  database: mysql
-  show-sql: true
-  database-platform: org.hibernate.dialect.MySQLDialect
-  hibernate:
-    ddl-auto: update
-data:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/parvat?createDatabaseIfNotExists=true
+    username: ${}
+    password: ${}
   jpa:
-    repositories:
-      enabled: true
+    database: mysql
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: update
+  data:
+    jpa:
+      repositories:
+        enabled: true
