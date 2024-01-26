@@ -1,6 +1,19 @@
 
+
+  SQL  With the Dialect.
 spring:
-  application:
-    name: PARVAT
-server:
-  port: 9876
+datasource:
+  driver-class-name: com.mysql.cj.jdbc.Driver
+  url: jdbc:mysql://localhost:3306/wikimedia
+  username: root
+  password: root
+jpa:
+  database: mysql
+  show-sql: true
+  database-platform: org.hibernate.dialect.MySQLDialect
+  hibernate:
+    ddl-auto: update
+data:
+  jpa:
+    repositories:
+      enabled: true
