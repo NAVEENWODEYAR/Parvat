@@ -1,0 +1,6 @@
+
+spring:
+  application:
+    name: PARVAT
+server:
+  port: 9876
