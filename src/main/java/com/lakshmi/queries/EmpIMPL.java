@@ -26,6 +26,7 @@ public class EmpIMPL {
         employeeList.add(new Employee(255, "Ali Baig", 23, "Male", "Infrastructure", 2018, 12700.0));
         employeeList.add(new Employee(266, "Sanvi Pandey", 26, "Female", "Product Development", 2015, 28900.0));
         employeeList.add(new Employee(277, "Hari", 41, "Male", "Product Development", 2012, 305700.0));
+        employeeList.add(new Employee(217, "Kiran", 4, "Female", "Product Development", 2016, 35700.0));
 
         // Real Time Queries On employeeList,
         /**

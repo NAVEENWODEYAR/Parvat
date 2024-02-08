@@ -10,9 +10,9 @@ public class Palindrome {
                 .noneMatch(i -> cleanedStr.charAt(i) != cleanedStr.charAt(cleanedStr.length() - i - 1));
     }
     public static void main(String[] args) {
-        if(isPalindrome("level"))
-            System.out.println("Given string is palindrome");
+        if(isPalindrome("level") || isPalindrome("level"))
+            System.out.println("Given strings are palindrome");
         else
-            System.out.println("Not an palindrome");
+            System.out.println("Not  palindrome");
     }
 }
