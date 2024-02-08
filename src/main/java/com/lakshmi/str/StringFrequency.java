@@ -20,5 +20,6 @@ static void stringFrequency(String st){
     public static void main(String[] args) {
         stringFrequency("String");
         stringFrequency("Malayalam");
+        stringFrequency("Racecar");
     }
 }
