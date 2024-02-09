@@ -12,14 +12,5 @@
         <input type="password" name="Password" id="i2" autocomplete="new-password" required/><br><br>
         <input type="submit" value="SUBMIT">
     </form>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        var form = document.getElementById('registerFrom');
-            if(form){
-                form.querySelectorAll('input,textarea')
-                    .forEach(input=>input.setAttribute('autocomplete','off'));
-            }
-    });
-    </script>
 </body>
 </html>
