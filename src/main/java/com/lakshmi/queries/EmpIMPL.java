@@ -7,7 +7,6 @@ public class EmpIMPL {
     public static void main(String[] args) {
          List<Employee> employeeList = new LinkedList<>();
 
-        employeeList.add(new Employee(111, "Jyothi", 32, "Female", "HR", 2011, 25000.0));
         employeeList.add(new Employee(122, "Bhaskar K", 25, "Male", "Sales And Marketing", 2015, 134500.0));
         employeeList.add(new Employee(133, "Ram", 29, "Male", "Infrastructure", 2012, 18000.0));
         employeeList.add(new Employee(123, "Helen Theron", 39, "Female", "Infrastructure", 2002, 48000.0));
