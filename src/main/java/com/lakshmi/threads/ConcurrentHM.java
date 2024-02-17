@@ -8,7 +8,7 @@ public class ConcurrentHM extends Thread{
                                           chm.put("foo",3);
                                           chm.put("foo",1);
                                           chm.put("foo",2);
-        System.out.println(chm);
         new ConcurrentHM().start();
+        System.out.println(Thread.currentThread());
     }
 }
