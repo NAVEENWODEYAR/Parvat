@@ -13,6 +13,6 @@ public class Palindrome {
         if(isPalindrome("level") || isPalindrome("level"))
             System.out.println("Given strings are palindrome");
         else
-            System.out.println("Not  palindrome");
+            System.out.println("Not palindrome");
     }
 }
