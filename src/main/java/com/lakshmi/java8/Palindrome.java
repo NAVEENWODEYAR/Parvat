@@ -11,8 +11,8 @@ public class Palindrome {
     }
     public static void main(String[] args) {
         if(isPalindrome("level") || isPalindrome("level"))
-            System.out.println("Given strings are palindrome");
+            System.out.println("Given strings,are palindrome");
         else
-            System.out.println("Not palindrome");
+            System.out.println("Not palindrome strings");
     }
 }
