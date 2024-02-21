@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 public class MethodsInCollectors2 {
 
     public static void main(String[] args) {
-        var list = Arrays.asList("One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight");
+        var list = Arrays.asList("One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight","Nine");
         List<Integer> num = Arrays.asList(1,2,3,4,5,6,7,8,9);
 
         // 1.Creating list: toList() , toSet(),
