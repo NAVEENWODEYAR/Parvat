@@ -4,23 +4,21 @@ public class StringReverse {
 
     // using charAt();
     static String reverseString(String st){
-        System.out.println("String given "+st);
         String rev = "";
-        for(int i=st.length()-1; i>0; i--){
+        for(int i=st.length(); i>=1; i--){
             rev = rev+ rev.charAt(i);
         }
         return rev;
     }
 
-    // using StringBuilder(),
+    /** using StringBuilder(),
     static String stringReverse(String st){
         StringBuilder sb = new StringBuilder(st);
         return sb.reverse().toString();
-    }
+    }**/
 
     public static void main(String[] args) {
         var st = reverseString("level");
-        System.out.println(stringReverse("string"));
         System.out.println("Reversed string "+st);
     }
 }
