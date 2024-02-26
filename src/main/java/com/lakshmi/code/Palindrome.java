@@ -3,6 +3,7 @@ package com.lakshmi.code;
 public class Palindrome {
 
     static boolean isPalindrome(String st){
+        st.toLowerCase();
         int left = 0;
         int right = st.length()-1;
 
@@ -12,12 +13,12 @@ public class Palindrome {
             }
             left ++;
             right --;
-
         }
             return true;
     }
+
     public static void main(String[] args) {
-        if (isPalindrome("Malayalam"))
+        if (isPalindrome("malayalam"))
             System.out.println("Palindrome");
         else
             System.out.println("Not palindrome");
