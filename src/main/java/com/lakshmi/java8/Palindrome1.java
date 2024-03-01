@@ -1,6 +1,5 @@
 package com.lakshmi.java8;
 
-import java.util.stream.IntStream;
 
 public class Palindrome1 {
     static boolean isPalindrome(String str){
@@ -12,12 +11,12 @@ public class Palindrome1 {
             if(str.charAt(left) !=str.charAt(right))
                 return false;
             left++;
-            right++;
+            right--;
         }
         return true;
     }
     public static void main(String[] args) {
-        if(isPalindrome("level") || isPalindrome("level"))
+        if(isPalindrome("level") )
             System.out.println("Given strings,are palindrome");
         else
             System.out.println("Not palindrome strings");
