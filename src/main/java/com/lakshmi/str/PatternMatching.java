@@ -5,7 +5,7 @@ public class PatternMatching {
         return st.toLowerCase().matches(".*[aeiou].*");
     }
     public static void main(String[] args) {
-        if(isVowelPreset("crypt"))
+        if(isVowelPreset("crypt") && isVowelPreset("cipher"))
             System.out.println("Vowel is present");
         else
             System.out.println("not present");
