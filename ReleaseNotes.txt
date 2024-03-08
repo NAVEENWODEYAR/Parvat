@@ -1,7 +1,5 @@
 Docker,
  Docker is one of the few websites that reflect system dark themes by default, which was a good surprise.
- The notes are detailed and are linked to further information, allowing people to consume data as per need.
- Since late 2021, the summary added at the beginning provides details on what changes have been carried out and how users are impacted in plain language.
 
  What to emulate: The organization is top-notch, and the help sections allow users to understand challenging terms. They provide a varying level of detail without overwhelming users. The use of alerts is wisely done too.
  What to avoid: The notes are clearly labeled and organized, leaving little room for shortcomings. The structure of the notes can get a bit monotonous – as if the team is trying to tick all boxes of a checklist.
