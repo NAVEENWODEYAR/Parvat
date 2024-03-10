@@ -1,7 +1,7 @@
 package com.lakshmi.java8;
 
 
-public class Palindrome1 {
+public class palindromeUsingLength {
     static boolean isPalindrome(String str){
         str.toLowerCase();
         int left=0;
