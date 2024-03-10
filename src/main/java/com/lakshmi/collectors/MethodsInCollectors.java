@@ -8,7 +8,7 @@ public class MethodsInCollectors {
     public static void main(String[] args) {
 
         // 1.Creating list: toList() , toSet(),
-        var list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9,0);
+        var list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9,0,2,4);
         var collect = list.stream().map(n -> n * n).collect(Collectors.toList());
         var set = list.stream().map(n -> n + n).collect(Collectors.toSet());
         System.out.println(list.getClass() + " " + list);
@@ -19,7 +19,7 @@ public class MethodsInCollectors {
 
 
         // 2. Creating specific collection: toCollection(),
-            List<Integer> num = Arrays.asList(1,2,3,4,5,6,7,8,9);
+            List<Integer> num = Arrays.asList(1,2,3,4,5,6,7,8,9,0);
             var collect1 = num.stream().filter(n -> n >= 2).collect(Collectors.toCollection(LinkedList::new));
             var collect2 = num.parallelStream().filter(n -> n > 5).collect(Collectors.toCollection(LinkedHashSet::new));
             System.out.println(collect1.getClass()+" "+collect);
