@@ -16,7 +16,7 @@ public class palindromeUsingLength {
         return true;
     }
     public static void main(String[] args) {
-        if(isPalindrome("level") || isPalindrome("malayalam") )
+        if(isPalindrome("level") && isPalindrome("malayalam") )
             System.out.println("Given strings,are palindrome");
         else
             System.out.println("Not palindrome strings");
