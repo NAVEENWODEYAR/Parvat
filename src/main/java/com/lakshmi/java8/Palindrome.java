@@ -10,7 +10,7 @@ public class Palindrome {
     }
     public static void main(String[] args) {
         if(isPalindrome("level") && isPalindrome("racecar"))
-            System.out.println("Given strings,are palindrome");
+            System.out.println("Given strings are palindromes");
         else
             System.out.println("Not palindrome strings");
     }
