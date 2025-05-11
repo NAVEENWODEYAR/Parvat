@@ -1,7 +1,7 @@
 
 spring:
   application:
-    name: PARVAT
+    name: PARVAT_APP
 server:
   port: 9876
 
