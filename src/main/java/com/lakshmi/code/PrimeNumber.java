@@ -12,8 +12,8 @@ package com.lakshmi.code;
         }
     public static void main(String[] args) {
         if(isPrime(9))
-            System.out.println("Prime");
+            System.out.println("Given number is Prime number");
         else
-            System.out.println("Not prime,");
+            System.out.println("Not prime number,");
     }
 }
