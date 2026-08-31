@@ -7,6 +7,8 @@ public class MethodsInCollectors {
 
     public static void main(String[] args) {
 
+System.out.println("Collectors methods");
+
         // 1.Creating list: toList() , toSet(),
         var list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9,0,2,4);
         var collect = list.stream().map(n -> n * n).collect(Collectors.toList());
