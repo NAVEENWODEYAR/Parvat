@@ -3,7 +3,10 @@ package com.lakshmi.str;
 import java.util.HashMap;
 
 public class StringFrequency {
+
 static void stringFrequency(String st){
+
+System.out.println("Character frequency using hashMap");
     char[] st1 = st.toLowerCase().toCharArray();
     HashMap<Character, Integer> hmap = new HashMap<>();
 
