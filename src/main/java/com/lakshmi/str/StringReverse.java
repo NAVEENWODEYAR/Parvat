@@ -18,7 +18,7 @@ public class StringReverse {
     }**/
 
     public static void main(String[] args) {
-System.out.println("Reverse an String");
+System.out.println("Reverse an string using charAt()");
         var st = reverseString("level");
         System.out.println("Reversed string: "+st);
     }
